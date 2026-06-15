@@ -377,7 +377,8 @@ function openBirthdaySite() {
 // ===== MAIN SITE LOGIC =====
 function startCountdown() {
   function tick() {
-    var t = new Date('2026-06-16T00:00:00'), n = new Date(), diff = t - n;
+    // Nepal is UTC+5:45, so midnight June 16 Nepal = June 15 18:15 UTC
+    var t = new Date('2026-06-15T18:15:00Z'), n = new Date(), diff = t - n;
     if (diff <= 0) {
       document.getElementById('d').textContent = '🌹';
       document.getElementById('h').textContent = '🎂';
